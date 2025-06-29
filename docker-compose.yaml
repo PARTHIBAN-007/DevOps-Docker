@@ -14,5 +14,7 @@ services:
     build:
       context: ./frontend
       dockerfile: Dockerfile
+    environment:
+      - API="https:backend"
     ports:
       - "3000:8080"
