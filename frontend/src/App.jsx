@@ -6,7 +6,7 @@ function App() {
 
   const fetchItems = async () => {
     try {
-      const res = await axios.get("/api/items/"); 
+      const res = await axios.get("http://localhost:8000/items/"); 
       setItems(res.data);
     } catch (error) {
       console.error("Failed to fetch items", error);
