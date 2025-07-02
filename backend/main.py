@@ -48,8 +48,8 @@ def create_item(item: Item):
     conn.close()
     return {"message": "Item added"}
 
-@app.get("/items/")
-def read_items():
+@app.get("/items/{category}")
+def read_items(category:str):
     conn = get_db_connection()
     items = conn.execute("SELECT * FROM items").fetchall()
     conn.close()
